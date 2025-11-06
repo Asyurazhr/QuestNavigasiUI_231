@@ -8,3 +8,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 
+enum class Navigasi {
+    Formulir,
+    Detail
+}
+
+
+
