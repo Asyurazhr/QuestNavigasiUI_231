@@ -33,3 +33,5 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.Detail.name){
+
