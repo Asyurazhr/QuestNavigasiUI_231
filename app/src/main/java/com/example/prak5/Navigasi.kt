@@ -13,5 +13,5 @@ enum class Navigasi {
     Detail
 }
 
-
+@Composable
 
