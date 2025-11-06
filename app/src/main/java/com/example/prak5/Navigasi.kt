@@ -19,13 +19,14 @@ enum class Navigasi {
 fun DataApp(
     navController: NavHostController = rememberNavController(),
     modifier: Modifier
-){
-    Scaffold { isiRuang->
+) {
+    Scaffold { isiRuang ->
         NavHost(
             navController = navController,
             startDestination = Navigasi.Formulir.name,
 
-            modifier = Modifier.padding(paddingValues = isiRuang)) {
+            modifier = Modifier.padding(paddingValues = isiRuang)
+        ) {
             composable(route = Navigasi.Formulir.name) {
                 FormIsian(
                     OnSubmitBtnClick = {
@@ -33,5 +34,13 @@ fun DataApp(
                     }
                 )
             }
-            composable(route = Navigasi.Detail.name){
+            composable(route = Navigasi.Detail.name) {
+                TampilData(
+                    onBackBtnClick = { cancelAndBackToFormulir(navController) }
+                )
+            }
+        }
+    }
+}
+
 
